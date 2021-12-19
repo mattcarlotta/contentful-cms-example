@@ -24,6 +24,7 @@ export default function Index({ error, preview, allArticles }) {
               <div className="flex flex-row">
                 {allArticles[category].map(
                   ({
+                    sys: { id },
                     articleCategory,
                     date,
                     linkSrc,
@@ -32,7 +33,7 @@ export default function Index({ error, preview, allArticles }) {
                     imgAlt,
                     title,
                   }) => (
-                    <article className="flex w-1/3 m-8" key={title}>
+                    <article className="flex w-1/3 m-8" key={id}>
                       <a
                         href={linkSrc}
                         aria-label={linkLabel}
