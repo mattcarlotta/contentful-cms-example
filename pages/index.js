@@ -44,9 +44,7 @@ export default function Index({ error, preview, allArticles }) {
                         <div className="relative">
                           <Image
                             className="object-fill object-center"
-                            src={imgSrc.url}
-                            height={imgSrc.height}
-                            width={imgSrc.width}
+                            {...imgSrc}
                             alt={imgAlt}
                           />
                           <div className="text-black absolute bottom-0 left-0 bg-overlay px-2 w-full text-[28px]">
