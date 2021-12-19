@@ -7,6 +7,7 @@ import isEmpty from "lodash.isempty";
 import { format } from "date-fns";
 import Container from "../components/container";
 import Layout from "../components/layout";
+import Image from "../components/image";
 import { getAllArticlesForHome } from "../lib/api";
 import { CMS_NAME } from "../lib/constants";
 
@@ -41,9 +42,11 @@ export default function Index({ error, preview, allArticles }) {
                         rel="noopener noreferrer"
                       >
                         <div className="relative">
-                          <img
+                          <Image
                             className="object-fill object-center"
                             src={imgSrc.url}
+                            height={imgSrc.height}
+                            width={imgSrc.width}
                             alt={imgAlt}
                           />
                           <div className="text-black absolute bottom-0 left-0 bg-overlay px-2 w-full text-[28px]">
