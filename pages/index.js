@@ -83,13 +83,10 @@ export default function Index({ error, preview, allArticles }) {
 
 export async function getStaticProps({ preview = false }) {
   try {
-    let allArticles = (await getAllArticlesForHome(preview)) ?? {};
-
-    if (allArticles.length)
-      allArticles = groupBy(allArticles, "articleCategory");
+    const allArticles = (await getAllArticlesForHome(preview)) ?? {};
 
     return {
-      props: { preview, allArticles },
+      props: { preview, allArticles: groupBy(allArticles, "articleCategory") },
     };
   } catch (error) {
     return {
