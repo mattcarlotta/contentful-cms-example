@@ -31,8 +31,14 @@ export default function Index({ error, preview, allArticles }) {
 }
 
 export async function getStaticProps({ preview = false }) {
+  const defaultArticles = {
+    Awards: {},
+    Features: {},
+    General_News: {},
+    Op_Eds: {},
+  };
   try {
-    const { data } = (await getAllArticlesForHome(preview)) ?? {};
+    const { data } = (await getAllArticlesForHome(preview)) ?? defaultArticles;
 
     return {
       props: { preview, allArticles: data },
@@ -42,7 +48,7 @@ export async function getStaticProps({ preview = false }) {
       props: {
         error: error.message.toString(),
         preview,
-        allArticles: { Awards: {}, Features: {}, General_News: {}, Op_Eds: {} },
+        allArticles: defaultArticles,
       },
     };
   }
