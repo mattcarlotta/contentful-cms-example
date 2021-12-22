@@ -1,165 +1,2259 @@
 {
-  "name": "Article",
-  "description": "",
-  "displayField": "title",
-  "fields": [
+  "contentTypes": [
     {
-      "id": "articleCategory",
-      "name": "Article Category",
-      "type": "Symbol",
-      "localized": false,
-      "required": true,
-      "validations": [
-        {
-          "in": ["Awards", "Features", "General News & Op-Eds", "Other"]
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "post",
+        "type": "ContentType",
+        "createdAt": "2021-12-19T06:25:48.890Z",
+        "updatedAt": "2021-12-19T06:25:49.157Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-12-19T06:25:49.157Z",
+        "firstPublishedAt": "2021-12-19T06:25:49.157Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
         }
-      ],
-      "disabled": false,
-      "omitted": false
+      },
+      "displayField": "title",
+      "name": "Post",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     },
     {
-      "id": "title",
-      "name": "Title",
-      "type": "Symbol",
-      "localized": false,
-      "required": true,
-      "validations": [
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "awards",
+        "type": "ContentType",
+        "createdAt": "2021-12-22T13:23:19.381Z",
+        "updatedAt": "2021-12-22T13:26:31.894Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2021-12-22T13:26:31.894Z",
+        "firstPublishedAt": "2021-12-22T13:23:19.720Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Awards",
+      "description": "",
+      "fields": [
         {
-          "size": {
-            "min": 10,
-            "max": 255
+          "id": "articleCategory",
+          "name": "Article Category",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "Awards"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "Awards"
           },
-          "message": "Please add a descriptive title for the article."
-        }
-      ],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "date",
-      "name": "Date",
-      "type": "Date",
-      "localized": false,
-      "required": true,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "linkSrc",
-      "name": "Link URL",
-      "type": "Symbol",
-      "localized": false,
-      "required": true,
-      "validations": [
+          "disabled": false,
+          "omitted": false
+        },
         {
-          "regexp": {
-            "pattern": "^(http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
-            "flags": null
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 10,
+                "max": 255
+              },
+              "message": "Please add a descriptive title for the article."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkSrc",
+          "name": "Link URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              },
+              "message": "The link source must be a valid http/https URL."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkLabel",
+          "name": "Link Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "You must provide an accessibility label that describes link source"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "imgSrc",
+          "name": "Thumbnail Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ],
+              "message": "Only common image extensions are accepted (png/jpg)."
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "imgAlt",
+          "name": "Thumbnail Image Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "Please provide an accessibility description of the image source."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "features",
+        "type": "ContentType",
+        "createdAt": "2021-12-22T13:23:37.168Z",
+        "updatedAt": "2021-12-22T13:27:04.539Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2021-12-22T13:27:04.539Z",
+        "firstPublishedAt": "2021-12-22T13:23:37.447Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Features",
+      "description": "",
+      "fields": [
+        {
+          "id": "articleCategory",
+          "name": "Article Category",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "Features"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "Features"
           },
-          "message": "The link source must be a valid http/https URL."
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 10,
+                "max": 255
+              },
+              "message": "Please add a descriptive title for the article."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkSrc",
+          "name": "Link URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              },
+              "message": "The link source must be a valid http/https URL."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkLabel",
+          "name": "Link Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "You must provide an accessibility label that describes link source"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "imgSrc",
+          "name": "Thumbnail Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ],
+              "message": "Only common image extensions are accepted (png/jpg)."
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "imgAlt",
+          "name": "Thumbnail Image Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "Please provide an accessibility description of the image source."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
         }
-      ],
-      "disabled": false,
-      "omitted": false
+      ]
     },
     {
-      "id": "linkLabel",
-      "name": "Link Description",
-      "type": "Symbol",
-      "localized": false,
-      "required": true,
-      "validations": [
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "generalNews",
+        "type": "ContentType",
+        "createdAt": "2021-12-22T13:24:22.443Z",
+        "updatedAt": "2021-12-22T13:27:35.968Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2021-12-22T13:27:35.968Z",
+        "firstPublishedAt": "2021-12-22T13:24:22.725Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "General News",
+      "description": "",
+      "fields": [
         {
-          "size": {
-            "min": 1,
-            "max": 255
+          "id": "articleCategory",
+          "name": "Article Category",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "General News"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "General News"
           },
-          "message": "You must provide an accessibility label that describes link source"
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 10,
+                "max": 255
+              },
+              "message": "Please add a descriptive title for the article."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkSrc",
+          "name": "Link URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              },
+              "message": "The link source must be a valid http/https URL."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkLabel",
+          "name": "Link Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "You must provide an accessibility label that describes link source"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "imgSrc",
+          "name": "Thumbnail Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ],
+              "message": "Only common image extensions are accepted (png/jpg)."
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "imgAlt",
+          "name": "Thumbnail Image Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "Please provide an accessibility description of the image source."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
         }
-      ],
-      "disabled": false,
-      "omitted": false
+      ]
     },
     {
-      "id": "imgSrc",
-      "name": "Thumbnail Image",
-      "type": "Link",
-      "localized": false,
-      "required": true,
-      "validations": [
-        {
-          "linkMimetypeGroup": ["image"],
-          "message": "Only common image extensions are accepted (png/jpg)."
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "opEds",
+        "type": "ContentType",
+        "createdAt": "2021-12-22T13:24:33.509Z",
+        "updatedAt": "2021-12-22T13:28:16.647Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2021-12-22T13:28:16.647Z",
+        "firstPublishedAt": "2021-12-22T13:24:33.792Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
         }
-      ],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "imgAlt",
-      "name": "Thumbnail Image Description",
-      "type": "Symbol",
-      "localized": false,
-      "required": true,
-      "validations": [
+      },
+      "displayField": "title",
+      "name": "Op Eds",
+      "description": "",
+      "fields": [
         {
-          "size": {
-            "min": 1,
-            "max": 255
+          "id": "articleCategory",
+          "name": "Article Category",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "Op Eds"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "Op Eds"
           },
-          "message": "Please provide an accessibility description of the image source."
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 10,
+                "max": 255
+              },
+              "message": "Please add a descriptive title for the article."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkSrc",
+          "name": "Link URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              },
+              "message": "The link source must be a valid http/https URL."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkLabel",
+          "name": "Link Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "You must provide an accessibility label that describes link source"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "imgSrc",
+          "name": "Thumbnail Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ],
+              "message": "Only common image extensions are accepted (png/jpg)."
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "imgAlt",
+          "name": "Thumbnail Image Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 255
+              },
+              "message": "Please provide an accessibility description of the image source."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
         }
-      ],
-      "disabled": false,
-      "omitted": false
+      ]
     }
   ],
-  "sys": {
-    "space": {
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
       "sys": {
-        "type": "Link",
-        "linkType": "Space",
-        "id": "hb5otnhwin4m"
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hb5otnhwin4m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-12-19T06:25:49.201Z",
+        "createdBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-19T06:25:49.617Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hb5otnhwin4m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2021-12-22T13:23:19.813Z",
+        "createdBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-22T13:26:32.534Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "awards",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "articleCategory",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkSrc",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkLabel",
+          "settings": {
+            "helpText": "For accessibility, please describe where the link navigates a user to."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgSrc",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgAlt",
+          "settings": {
+            "helpText": "For accessbility, please describe the image content."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hb5otnhwin4m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2021-12-22T13:23:37.545Z",
+        "createdBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-22T13:27:05.221Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "features",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "articleCategory",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkSrc",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkLabel",
+          "settings": {
+            "helpText": "For accessibility, please describe where the link navigates a user to."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgSrc",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgAlt",
+          "settings": {
+            "helpText": "For accessbility, please describe the image content."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hb5otnhwin4m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2021-12-22T13:24:22.787Z",
+        "createdBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-22T13:27:36.680Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "generalNews",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "articleCategory",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkSrc",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkLabel",
+          "settings": {
+            "helpText": "For accessibility, please describe where the link navigates a user to."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgSrc",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgAlt",
+          "settings": {
+            "helpText": "For accessbility, please describe the image content."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hb5otnhwin4m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2021-12-22T13:24:33.900Z",
+        "createdBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-22T13:28:17.357Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5HEH64CuRJy8sZgGebFMG9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "opEds",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "articleCategory",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkSrc",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkLabel",
+          "settings": {
+            "helpText": "For accessibility, please describe where the link navigates a user to."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgSrc",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imgAlt",
+          "settings": {
+            "helpText": "For accessbility, please describe the image content."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "qIHT3d9SulyUNNKhxnVbV",
+        "type": "Entry",
+        "createdAt": "2021-12-19T06:40:15.639Z",
+        "updatedAt": "2021-12-19T06:40:21.502Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2021-12-19T06:40:21.502Z",
+        "firstPublishedAt": "2021-12-19T06:40:21.502Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test"
+        }
       }
     },
-    "id": "category",
-    "type": "ContentType",
-    "createdAt": "2021-12-18T21:50:46.736Z",
-    "updatedAt": "2021-12-18T23:24:03.754Z",
-    "environment": {
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
       "sys": {
-        "id": "master",
-        "type": "Link",
-        "linkType": "Environment"
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "pozZZ7ZDgMLwfhZFs4bOl",
+        "type": "Entry",
+        "createdAt": "2021-12-19T07:05:20.059Z",
+        "updatedAt": "2021-12-19T07:05:45.271Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2021-12-19T07:05:45.271Z",
+        "firstPublishedAt": "2021-12-19T07:05:45.271Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test"
+        }
       }
     },
-    "publishedVersion": 31,
-    "publishedAt": "2021-12-18T23:24:03.754Z",
-    "firstPublishedAt": "2021-12-18T21:50:47.060Z",
-    "createdBy": {
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
       "sys": {
-        "type": "Link",
-        "linkType": "User",
-        "id": "5HEH64CuRJy8sZgGebFMG9"
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "zYkC0jfoTk4h7KPEItcdD",
+        "type": "Entry",
+        "createdAt": "2021-12-22T18:35:25.494Z",
+        "updatedAt": "2021-12-22T18:36:07.427Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2021-12-22T18:36:07.427Z",
+        "firstPublishedAt": "2021-12-22T18:36:07.427Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "generalNews"
+          }
+        }
+      },
+      "fields": {
+        "articleCategory": {
+          "en-US": "General News"
+        },
+        "title": {
+          "en-US": "Nike Acquires Virtual Sneaker Maker With Sights Set on Metaverse Shopping"
+        },
+        "date": {
+          "en-US": "2021-12-15T09:00-08:00"
+        },
+        "linkSrc": {
+          "en-US": "https://www.adweek.com/commerce/nike-acquires-virtual-sneaker-seller/"
+        },
+        "linkLabel": {
+          "en-US": "Navigate to the 'Nike Acquires Virtual Sneaker Maker' article."
+        },
+        "imgSrc": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7y2dl6ywMJwXIKo7QCsesK"
+            }
+          }
+        },
+        "imgAlt": {
+          "en-US": "An image with 4 white logos in the center of the image against a black background."
+        }
       }
     },
-    "updatedBy": {
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
       "sys": {
-        "type": "Link",
-        "linkType": "User",
-        "id": "5HEH64CuRJy8sZgGebFMG9"
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "22Rwa79hTLq5qvxqngyqjK",
+        "type": "Entry",
+        "createdAt": "2021-12-22T18:36:29.595Z",
+        "updatedAt": "2021-12-22T18:37:11.110Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2021-12-22T18:37:11.110Z",
+        "firstPublishedAt": "2021-12-22T18:37:11.110Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "awards"
+          }
+        }
+      },
+      "fields": {
+        "articleCategory": {
+          "en-US": "Awards"
+        },
+        "title": {
+          "en-US": "Applications Are Open for Adweek’s 2022 Media Agency of the Year"
+        },
+        "date": {
+          "en-US": "2021-12-13T08:30-08:00"
+        },
+        "linkSrc": {
+          "en-US": "https://www.adweek.com/agencies/applications-are-open-for-adweeks-2022-media-agency-of-the-year/"
+        },
+        "linkLabel": {
+          "en-US": "Navigate to the 'AdWeek Applications Are Open' article."
+        },
+        "imgSrc": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2ZeRBYrapKVZSQ1UAJC7N4"
+            }
+          }
+        },
+        "imgAlt": {
+          "en-US": "A serif font that reads 'Media Agency' on top, with 'of the Year 2022' beneath it with alternating blue text on a black background."
+        }
       }
     },
-    "publishedCounter": 16,
-    "version": 32,
-    "publishedBy": {
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
       "sys": {
-        "type": "Link",
-        "linkType": "User",
-        "id": "5HEH64CuRJy8sZgGebFMG9"
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "2JccTJfqwsASnqln62hlJg",
+        "type": "Entry",
+        "createdAt": "2021-12-22T18:37:25.466Z",
+        "updatedAt": "2021-12-22T18:38:01.877Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2021-12-22T18:38:01.877Z",
+        "firstPublishedAt": "2021-12-22T18:38:01.877Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "features"
+          }
+        }
+      },
+      "fields": {
+        "articleCategory": {
+          "en-US": "Features"
+        },
+        "title": {
+          "en-US": "Adweek's 2021 Young Influentials Are All About Creating Change in Their Industries"
+        },
+        "date": {
+          "en-US": "2021-10-25T08:00-08:00"
+        },
+        "linkSrc": {
+          "en-US": "https://www.adweek.com/brand-marketing/meet-adweeks-2021-young-influentials/"
+        },
+        "linkLabel": {
+          "en-US": "Navigate to the AdWeeks 2021 Young Infuentials article"
+        },
+        "imgSrc": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "403jCHpQR8MbOJPZ225W3Y"
+            }
+          }
+        },
+        "imgAlt": {
+          "en-US": "A hand-written like serif font that displays 'Young Influentials' in black text against a yellow background."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "5YnIapQcsVu4H8nz5FKpYf",
+        "type": "Entry",
+        "createdAt": "2021-12-22T18:38:19.041Z",
+        "updatedAt": "2021-12-22T18:38:52.856Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2021-12-22T18:38:52.856Z",
+        "firstPublishedAt": "2021-12-22T18:38:52.856Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "generalNews"
+          }
+        }
+      },
+      "fields": {
+        "articleCategory": {
+          "en-US": "General News"
+        },
+        "title": {
+          "en-US": "Ford’s Latest Delivery Pilot Will Bring Groceries to Detroit Seniors"
+        },
+        "date": {
+          "en-US": "2021-12-14T10:00-08:00"
+        },
+        "linkSrc": {
+          "en-US": "https://www.adweek.com/commerce/ford-delivery-pilot-will-bring-groceries-to-detroit-seniors/"
+        },
+        "linkLabel": {
+          "en-US": "Navigate to 'Ford's Latest Delivery Pilot' article."
+        },
+        "imgSrc": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ExU9l8uI9l2LMywWiicku"
+            }
+          }
+        },
+        "imgAlt": {
+          "en-US": "A man dressed in a blue uniform removing a bag of grocercies from a Ford on the go vehicle. "
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "1JFeScSTprAedwcA6l2WTl",
+        "type": "Entry",
+        "createdAt": "2021-12-22T18:39:49.415Z",
+        "updatedAt": "2021-12-22T18:44:06.452Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2021-12-22T18:44:06.452Z",
+        "firstPublishedAt": "2021-12-22T18:44:06.452Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "opEds"
+          }
+        }
+      },
+      "fields": {
+        "articleCategory": {
+          "en-US": "Op Eds"
+        },
+        "title": {
+          "en-US": "Biden’s flurry of nominations will bring generations of diversity to federal courts "
+        },
+        "date": {
+          "en-US": "2021-12-22T03:00-08:00"
+        },
+        "linkSrc": {
+          "en-US": "https://www.latimes.com/opinion/story/2021-12-22/bidens-judicial-nominations-diversity-federal-courts"
+        },
+        "linkLabel": {
+          "en-US": "Navigate to 'Biden's Nominations Diversify Federal Courts' article."
+        },
+        "imgSrc": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "61MQqPdEIaZ6EAAMTAviLB"
+            }
+          }
+        },
+        "imgAlt": {
+          "en-US": "An picture of Cristina D. Silva, who would be the second Latina federal judge on the U.S. District Court for the District of Nevada."
+        }
       }
     }
-  }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "403jCHpQR8MbOJPZ225W3Y",
+        "type": "Asset",
+        "createdAt": "2021-12-18T22:21:52.941Z",
+        "updatedAt": "2021-12-18T22:23:44.712Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2021-12-18T22:23:44.712Z",
+        "firstPublishedAt": "2021-12-18T22:23:44.712Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "2021 Young Influentials"
+        },
+        "description": {
+          "en-US": "A stylized font that displays 'Young Influentials' in black text against a yellow background."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/hb5otnhwin4m/403jCHpQR8MbOJPZ225W3Y/a22bbe11f4d1ff7c152fc8f9d1ef921b/2021YoungInfluentials.png",
+            "details": {
+              "size": 82467,
+              "image": {
+                "width": 600,
+                "height": 315
+              }
+            },
+            "fileName": "2021YoungInfluentials.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "2ZeRBYrapKVZSQ1UAJC7N4",
+        "type": "Asset",
+        "createdAt": "2021-12-18T22:28:04.574Z",
+        "updatedAt": "2021-12-18T22:29:40.087Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-12-18T22:29:40.087Z",
+        "firstPublishedAt": "2021-12-18T22:29:40.087Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Applications Are Open"
+        },
+        "description": {
+          "en-US": "A stylized font that read 'Media Agency' on top, with 'of the Year 2022' beneath it with alternating blue text on a black background."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/hb5otnhwin4m/2ZeRBYrapKVZSQ1UAJC7N4/b2dc115a21444f56038614b3957cd158/ApplicationsAreOpen.jpg",
+            "details": {
+              "size": 38438,
+              "image": {
+                "width": 652,
+                "height": 342
+              }
+            },
+            "fileName": "ApplicationsAreOpen.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "7y2dl6ywMJwXIKo7QCsesK",
+        "type": "Asset",
+        "createdAt": "2021-12-18T22:35:39.146Z",
+        "updatedAt": "2021-12-18T22:35:57.398Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2021-12-18T22:35:57.398Z",
+        "firstPublishedAt": "2021-12-18T22:35:57.398Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nike Acquire Sneaker Maker"
+        },
+        "description": {
+          "en-US": "An image with 4 white logos in the center of the image against a black background."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/hb5otnhwin4m/7y2dl6ywMJwXIKo7QCsesK/5faa2178953a6a30187db86bc795f2a6/NikeAcquiresSneakerMaker.jpg",
+            "details": {
+              "size": 5591,
+              "image": {
+                "width": 652,
+                "height": 342
+              }
+            },
+            "fileName": "NikeAcquiresSneakerMaker.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "ExU9l8uI9l2LMywWiicku",
+        "type": "Asset",
+        "createdAt": "2021-12-18T22:39:00.492Z",
+        "updatedAt": "2021-12-18T22:39:18.063Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2021-12-18T22:39:18.063Z",
+        "firstPublishedAt": "2021-12-18T22:39:18.063Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Ford Automates Delivery"
+        },
+        "description": {
+          "en-US": "A man dressed in a blue uniform removing a bag of grocercies from a Ford on the go vehicle. "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/hb5otnhwin4m/ExU9l8uI9l2LMywWiicku/ee975f1704df6de05400d039382ddab5/FordAutonomousDeliveryPilot.jpg",
+            "details": {
+              "size": 65133,
+              "image": {
+                "width": 652,
+                "height": 342
+              }
+            },
+            "fileName": "FordAutonomousDeliveryPilot.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "id": "61MQqPdEIaZ6EAAMTAviLB",
+        "type": "Asset",
+        "createdAt": "2021-12-22T18:42:18.548Z",
+        "updatedAt": "2021-12-22T18:44:00.649Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2021-12-22T18:44:00.649Z",
+        "firstPublishedAt": "2021-12-22T18:44:00.649Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Biden Nominations Diversify Federal Courts"
+        },
+        "description": {
+          "en-US": "An picture of Cristina D. Silva, who would be the second Latina federal judge on the U.S. District Court for the District of Nevada."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/hb5otnhwin4m/61MQqPdEIaZ6EAAMTAviLB/baeb857e4678dfeaef0c7eb7b29ab894/BidenNominationFedCourt.jpeg",
+            "details": {
+              "size": 55019,
+              "image": {
+                "width": 840,
+                "height": 560
+              }
+            },
+            "fileName": "BidenNominationFedCourt.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "6bvNtu1MV0CVvQK2lxPuIx",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "48756cf3-e16d-4801-bd78-8dd411ae8269"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "createdAt": "2021-12-18T20:48:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedAt": "2021-12-18T20:48:35Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "6byxJD5NqtNTRl4Zac1eI1",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hb5otnhwin4m"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "createdAt": "2021-12-18T20:48:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5HEH64CuRJy8sZgGebFMG9"
+          }
+        },
+        "updatedAt": "2021-12-18T20:48:35Z"
+      }
+    }
+  ]
 }
